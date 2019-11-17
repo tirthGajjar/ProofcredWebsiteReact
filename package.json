@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "entry": {
+    "index": "./index.js"
+  },
+  "dependencies": {
+    "antd": "^3.25.1",
+    "classnames": "^2.2.6",
+    "enquire-js": "^0.2.1",
+    "prop-types": "^15.7.2",
+    "rc-queue-anim": "^1.8.2",
+    "rc-scroll-anim": "^2.7.3",
+    "rc-tween-one": "^2.6.5",
+    "react": "^16.12.0",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.12.0",
+    "react-github-button": "^0.1.11"
+  },
+  "devDependencies": {
+    "atool-build": "^1.0.8",
+    "atool-test-mocha": "^0.2.1",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-import": "^1.12.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.26.0",
+    "dora": "^0.6.1",
+    "dora-plugin-webpack": "^1.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "expect": "^24.9.0",
+    "gh-pages": "^2.1.1",
+    "husky": "^3.0.9",
+    "pre-commit": "^1.2.2",
+    "prettier": "1.19.1",
+    "pretty-quick": "^2.0.1",
+    "redbox-react": "^1.6.0"
+  },
+  "scripts": {
+    "build": "atool-build && cp index.html dist",
+    "lint": "eslint --ext .js,.jsx src/",
+    "eslint-fix": "eslint --fix src/ --ext .js,.jsx",
+    "start": "dora --plugins webpack",
+    "test": "atool-test-mocha ./**/__tests__/*-test.js",
+    "deploy": "rm -rf dist && npm run build && node ./deploy.js",
+    "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
+    "precommit": "pretty-quick --staged",
+    "postcommit": "git update-index -g"
+  }
+}
