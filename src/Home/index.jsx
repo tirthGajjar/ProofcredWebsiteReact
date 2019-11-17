@@ -1,15 +1,15 @@
-import React from "react";
-import DocumentTitle from "react-document-title";
-import { enquireScreen } from "enquire-js";
-import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
+import React from 'react';
+import DocumentTitle from 'react-document-title';
+import { enquireScreen } from 'enquire-js';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 
-import Header from "./Header";
-import Banner from "./Banner";
-import Page1 from "./Page1";
+import Header from './Header';
+import Banner from './Banner';
+import Page1 from './Page1';
 // import Page2 from './Page2';
-import Footer from "./Footer";
-import "./static/style";
-import Pricing from "./component/Pricing";
+import Footer from './Footer';
+import './static/style';
+import Pricing from './component/Pricing';
 
 let isMobile;
 
@@ -20,13 +20,13 @@ configureAnchors({ offset: -60, scrollDuration: 200 });
 
 class Home extends React.PureComponent {
   state = {
-    isMobile
+    isMobile,
   };
 
   componentDidMount() {
     enquireScreen(b => {
       this.setState({
-        isMobile: !!b
+        isMobile: !!b,
       });
     });
   }

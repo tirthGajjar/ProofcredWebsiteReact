@@ -14,18 +14,11 @@ function Banner({ isMobile }) {
           <BannerSVGAnimMobile />
         </TweenOne>
       )}
-      <QueueAnim
-        className="banner-title-wrapper"
-        type={isMobile ? 'bottom' : 'right'}
-      >
+      <QueueAnim className="banner-title-wrapper" type={isMobile ? 'bottom' : 'right'}>
         <h1 key="h1">Proofcred</h1>
         <p key="content">Increase Conversions & Site Growth - Proofcred</p>
         <div key="button" className="button-wrapper">
-          <a
-            href="https://app.proofcred.com/register"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://app.proofcred.com/register" target="_blank" rel="noopener noreferrer">
             <Button type="primary">Sign Up Now</Button>
           </a>
         </div>

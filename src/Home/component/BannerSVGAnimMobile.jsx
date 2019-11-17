@@ -1,55 +1,55 @@
 /* eslint-disable */
-import React from "react";
-import TweenOne from "rc-tween-one";
-import SvgDrawPlugin from "rc-tween-one/lib/plugin/SvgDrawPlugin";
+import React from 'react';
+import TweenOne from 'rc-tween-one';
+import SvgDrawPlugin from 'rc-tween-one/lib/plugin/SvgDrawPlugin';
 TweenOne.plugins.push(SvgDrawPlugin);
 
 const animate = {
   scale: {
     scale: 0,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   alpha: {
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   y: {
     y: 30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   y2: {
     y: -30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   x: {
     x: 30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   x2: {
     x: -30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   draw: {
     SVGDraw: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   loop: {
     yoyo: true,
     repeat: -1,
-    duration: 2500
-  }
+    duration: 2500,
+  },
 };
 
 export default function() {
@@ -137,24 +137,12 @@ export default function() {
           fill="#3B3A4E"
         />
         <path d="M998.176 420.91H823.072V426.33H998.176V420.91Z" fill="white" />
-        <path
-          d="M998.176 431.416H823.072V436.836H998.176V431.416Z"
-          fill="white"
-        />
+        <path d="M998.176 431.416H823.072V436.836H998.176V431.416Z" fill="white" />
         <path d="M998.289 410.57H823.185V415.99H998.289V410.57Z" fill="white" />
-        <path
-          d="M998.289 381.554H883.676V386.974H998.289V381.554Z"
-          fill="white"
-        />
-        <path
-          d="M938.618 392.58H883.979V397.439H938.618V392.58Z"
-          fill="white"
-        />
+        <path d="M998.289 381.554H883.676V386.974H998.289V381.554Z" fill="white" />
+        <path d="M938.618 392.58H883.979V397.439H938.618V392.58Z" fill="white" />
         <path d="M877.8 441.234H823.161V446.093H877.8V441.234Z" fill="white" />
-        <path
-          d="M998.316 361.485H883.979V376.061H998.316V361.485Z"
-          fill="white"
-        />
+        <path d="M998.316 361.485H883.979V376.061H998.316V361.485Z" fill="white" />
       </g>
       <path
         d="M208.5 22C213.194 22 217 17.7467 217 12.5C217 7.2533 213.194 3 208.5 3C203.806 3 200 7.2533 200 12.5C200 17.7467 203.806 22 208.5 22Z"
@@ -329,21 +317,9 @@ export default function() {
           />
           <feOffset dy="5" />
           <feGaussianBlur stdDeviation="15" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
         <linearGradient
           id="paint0_linear"
