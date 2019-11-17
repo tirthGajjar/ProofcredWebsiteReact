@@ -12,11 +12,6 @@ export const Pricing20DataSource = {
         children: 'Choose your Pricing Plan',
         className: 'pricing2-title-h1',
       },
-      {
-        name: 'title',
-        children: 'Choose your Pricing Plan',
-        className: 'pricing2-title-h1',
-      },
     ],
   },
   Table: {
