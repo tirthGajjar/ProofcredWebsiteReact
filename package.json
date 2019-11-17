@@ -39,7 +39,7 @@
     "redbox-react": "^1.6.0"
   },
   "scripts": {
-    "build": "atool-build && cp index.html dist",
+    "build": "atool-build && copy index.html dist",
     "lint": "eslint --ext .js,.jsx src/",
     "eslint-fix": "eslint --fix src/ --ext .js,.jsx",
     "start": "dora --plugins webpack",
