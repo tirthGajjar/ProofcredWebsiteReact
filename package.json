@@ -40,7 +40,8 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.0",
     "pretty-quick": "^2.0.1",
-    "redbox-react": "^1.6.0"
+    "redbox-react": "^1.6.0",
+    "rimraf": "^3.0.0"
   },
   "husky": {
     "hooks": {
@@ -60,7 +61,7 @@
     "eslint-fix": "eslint --fix src/ --ext .js,.jsx",
     "start": "dora --plugins webpack",
     "test": "atool-test-mocha ./**/__tests__/*-test.js",
-    "deploy": "rm -rf dist && npm run build && node ./deploy.js",
+    "deploy": "rimraf dist && npm run build && node ./deploy.js",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
     "precommit": "pretty-quick --staged",
     "postcommit": "git update-index -g"
