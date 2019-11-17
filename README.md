@@ -1,23 +1,17 @@
+
 ### Proofcred
 
-Proofcred 里的 landing page.
-
-脚手架使用的是： [antd-init](https://github.com/ant-design/antd-init);
+Proofcred landing page.
 
 ## preview
 
-https://pro.ant.design
-
-https://ant-motion.github.io/ant-design-pro-landing-page/
+https://know.tirth.dev/ProofcredWebsiteReact/
 
 ## install
 
 ```
-$ npm i
+$ npm run build
 ```
 
-## Development
+Push changes to git repo to see on github pages
 
-```
-$ npm start
-```
