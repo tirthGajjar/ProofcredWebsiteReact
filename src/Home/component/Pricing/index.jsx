@@ -2,8 +2,8 @@
 /* eslint arrow-parens: 0 */
 import React from 'react';
 import { enquireScreen } from 'enquire-js';
-import Pricing2 from './Pricing2';
 import QueueAnim from 'rc-queue-anim';
+import Pricing2 from './Pricing2';
 import { Pricing20DataSource } from './data.source';
 import './less/antMotionStyle.less';
 import { Button } from 'antd';
@@ -63,10 +63,14 @@ export default class Pricing extends React.Component {
             <h1 className="c-white f-2-5">Plan and Pricing</h1>
             <span className="pricing-header-span">Use free for 15 days.</span>
             <span className="pricing-header-span">
-              Get started immediately, pay when ypu are ready.
+              Get started immediately, pay when you are ready.
             </span>
             <div className="m-2">
-              <a target="_blank" href="https://app.proofcred.com/register">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://app.proofcred.com/register"
+              >
                 <Button className="pricing-custom-sign-up-butoon" size="large">
                   SIGN UP FOR FREE
                 </Button>
