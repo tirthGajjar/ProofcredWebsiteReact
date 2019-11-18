@@ -109,15 +109,11 @@ class Pricing2 extends React.PureComponent {
                   type={['right', 'left']}
                   ease={['easeOutQuart', 'easeInOutQuart']}
                 >
-                  {!isMonthlyPlan
-                    ? [
-                        <span className="pricing-plan-save-span">
-                          <Tag color="green" style={{ padding: '5px 10px' }}>
-                            Save 20% Annually!
-                          </Tag>
-                        </span>,
-                      ]
-                    : null}
+                  <span className="pricing-plan-save-span">
+                    <Tag color="green" style={{ padding: '5px 10px' }}>
+                      {isMonthlyPlan ? 'Save 20% Annually!' : 'Hurray, you are saving 20%!'}   
+                    </Tag>
+                  </span>                   
                 </QueueAnim>
               </div>
               {childrenToRender}
