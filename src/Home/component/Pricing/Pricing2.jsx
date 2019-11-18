@@ -37,10 +37,10 @@ class Pricing2 extends React.PureComponent {
   getMobileChild = (table, isMonthlyPlan) => {
     const { columns, dataSource, ...tableProps } = table;
     const names = columns[isMonthlyPlan ? 'MONTHLY' : 'YEARLY'].filter(
-      (item) => item.key.indexOf('name') >= 0,
+      item => item.key.indexOf('name') >= 0,
     );
     const newColumns = columns[isMonthlyPlan ? 'MONTHLY' : 'YEARLY'].filter(
-      (item) => item.key.indexOf('name') === -1,
+      item => item.key.indexOf('name') === -1,
     );
     return newColumns.map((item, i) => {
       const items = [].concat(names[0], item).filter(c => c);
@@ -71,9 +71,7 @@ class Pricing2 extends React.PureComponent {
 
   render() {
     const { dataSource, isMobile, isMonthlyPlan, ...props } = this.props;
-    const {
- Table: table, wrapper, page, titleWrapper 
-} = dataSource;
+    const { Table: table, wrapper, page, titleWrapper } = dataSource;
     const { columns, dataSource: tableData, ...$table } = table;
     const tableProps = {
       ...$table,
@@ -81,7 +79,7 @@ class Pricing2 extends React.PureComponent {
       dataSource: this.getDataSource(tableData.children, columns.MONTHLY),
     };
     const childrenToRender = isMobile ? (
-      this.getMobileChild(table , isMonthlyPlan)
+      this.getMobileChild(table, isMonthlyPlan)
     ) : (
       <Table key="table" {...tableProps} pagination={false} bordered />
     );
@@ -95,25 +93,33 @@ class Pricing2 extends React.PureComponent {
               ease={['easeOutQuad', 'easeInOutQuad']}
               key="content"
             >
-            <div className="pricing2-pricing-plan-div">
-              <span className="pricing2-pricing-plan-name">Monthly</span>
-              <Switch
-                style={{width: '50px'}}
-                checked={!isMonthlyPlan}
-                onChange={(e) => {
-                  this.onPlanChange(e);
-                }}
-              />
-              <span className="pricing2-pricing-plan-name">Annual</span>
-              <QueueAnim className="demo-content"
-                key="demo"
-                type={['right', 'left']}
-                ease={['easeOutQuart', 'easeInOutQuart']}>
-                { !isMonthlyPlan ? [
-                  <span className="pricing-plan-save-span"><Tag color="green" style={{padding: '5px 10px'}}>Save 20% Annually!</Tag></span>
-                ] : null}
-              </QueueAnim>
-            </div>
+              <div className="pricing2-pricing-plan-div">
+                <span className="pricing2-pricing-plan-name">Monthly</span>
+                <Switch
+                  style={{ width: '50px' }}
+                  checked={!isMonthlyPlan}
+                  onChange={e => {
+                    this.onPlanChange(e);
+                  }}
+                />
+                <span className="pricing2-pricing-plan-name">Annual</span>
+                <QueueAnim
+                  className="demo-content"
+                  key="demo"
+                  type={['right', 'left']}
+                  ease={['easeOutQuart', 'easeInOutQuart']}
+                >
+                  {!isMonthlyPlan
+                    ? [
+                        <span className="pricing-plan-save-span">
+                          <Tag color="green" style={{ padding: '5px 10px' }}>
+                            Save 20% Annually!
+                          </Tag>
+                        </span>,
+                      ]
+                    : null}
+                </QueueAnim>
+              </div>
               {childrenToRender}
             </QueueAnim>
           </OverPack>

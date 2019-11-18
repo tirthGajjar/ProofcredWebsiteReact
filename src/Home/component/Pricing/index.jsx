@@ -58,23 +58,22 @@ export default class Pricing extends React.Component {
     ];
     return (
       <div>
-        <QueueAnim
-            type="bottom"
-            leaveReverse
-            ease={['easeOutQuad', 'easeInOutQuad']}
-            key="content"
-          >
-            <div className="pricing-header-message">
-              <h1 className="c-white f-2-5">Plan and Pricing</h1>
-              <span className="pricing-header-span">Use free for 15 days.</span>
-              <span className="pricing-header-span">Get started immediately, pay when ypu are ready.</span>
-              <div className="m-2">
-                <a target="_blank" href="https://app.proofcred.com/register">
-                  <Button className="pricing-custom-sign-up-butoon" size='large'>SIGN UP FOR FREE</Button>
-                </a>
-              </div>
+        <QueueAnim type="bottom" leaveReverse ease={['easeOutQuad', 'easeInOutQuad']} key="content">
+          <div className="pricing-header-message">
+            <h1 className="c-white f-2-5">Plan and Pricing</h1>
+            <span className="pricing-header-span">Use free for 15 days.</span>
+            <span className="pricing-header-span">
+              Get started immediately, pay when ypu are ready.
+            </span>
+            <div className="m-2">
+              <a target="_blank" href="https://app.proofcred.com/register">
+                <Button className="pricing-custom-sign-up-butoon" size="large">
+                  SIGN UP FOR FREE
+                </Button>
+              </a>
             </div>
-        </QueueAnim>    
+          </div>
+        </QueueAnim>
         <div
           className="pricing-table-wrapper"
           ref={d => {

@@ -82,9 +82,7 @@ export const Pricing20DataSource = {
                 children: (
                   <div className="pricing2-table-price">
                     <span className="pricing2-table-currency">$</span>
-                    <span className="pricing2-table-amount">
-                      9
-                    </span>
+                    <span className="pricing2-table-amount">9</span>
                     <div>Per Month</div>
                   </div>
                 ),
@@ -216,9 +214,7 @@ export const Pricing20DataSource = {
                 children: (
                   <div className="pricing2-table-price">
                     <span className="pricing2-table-currency">$</span>
-                    <span className="pricing2-table-amount">
-                      81
-                    </span>
+                    <span className="pricing2-table-amount">81</span>
                     <div>Per Year</div>
                   </div>
                 ),

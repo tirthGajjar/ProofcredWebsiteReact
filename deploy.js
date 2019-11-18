@@ -9,7 +9,7 @@ ghPages.publish(
       console.log(message);
     },
   },
-  function (err) {
+  function(err) {
     if (err) {
       throw err;
     }

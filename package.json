@@ -14,7 +14,8 @@
     "react": "^16.12.0",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.12.0",
-    "react-github-button": "^0.1.11"
+    "react-github-button": "^0.1.11",
+    "react-scrollable-anchor": "^0.6.1"
   },
   "devDependencies": {
     "atool-build": "^1.0.8",
