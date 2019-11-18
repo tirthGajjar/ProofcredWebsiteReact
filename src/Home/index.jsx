@@ -1,29 +1,35 @@
-import React from "react";
-import DocumentTitle from "react-document-title";
-import { enquireScreen } from "enquire-js";
-import ScrollableAnchor, { configureAnchors } from "react-scrollable-anchor";
+import './static/style';
 
-import Header from "./Header";
-import Banner from "./Banner";
-import Page1 from "./Page1";
+import DocumentTitle from 'react-document-title';
+import React from 'react';
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
+import { enquireScreen } from 'enquire-js';
+
+import Banner from './Banner';
 // import Page2 from './Page2';
-import Footer from "./Footer";
-import "./static/style";
-import Pricing from "./component/Pricing";
+import Footer from './Footer';
+import Header from './Header';
+import Page1 from './Page1';
+import Pricing from './component/Pricing';
 
 let isMobile;
 
-enquireScreen((b) => {
+enquireScreen(b => {
   isMobile = b;
 });
 
+configureAnchors({ offset: -150, scrollDuration: 200 });
+
 class Home extends React.PureComponent {
-  state = {
-    isMobile,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      isMobile,
+    };
+  }
 
   componentDidMount() {
-    enquireScreen((b) => {
+    enquireScreen(b => {
       this.setState({
         isMobile: !!b,
       });
@@ -31,19 +37,20 @@ class Home extends React.PureComponent {
   }
 
   render() {
+    const { isMobile } = this.state;
     return (
       <DocumentTitle title="Proofcread">
         <div>
-          <Header isMobile={this.state.isMobile} />
-          <ScrollableAnchor id="scroll-anchor-banner">
-            <div />
-          </ScrollableAnchor>
+          <Header isMobile={isMobile} />
           <div className="home-wrapper">
-            <Banner isMobile={this.state.isMobile} />
-            <ScrollableAnchor id="scroll-anchor-features">
+            <ScrollableAnchor id="home">
+              <div className="home-placeholder" style={{ height: '100vh', position: 'absolute' }} />
+            </ScrollableAnchor>
+            <Banner isMobile={isMobile} />
+            <ScrollableAnchor id="features">
               <Page1 />
             </ScrollableAnchor>
-            <ScrollableAnchor id="scroll-anchor-pricing">
+            <ScrollableAnchor id="pricing">
               <Pricing />
             </ScrollableAnchor>
           </div>

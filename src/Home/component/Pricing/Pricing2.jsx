@@ -5,31 +5,28 @@ import { Table, Switch, Tag } from 'antd';
 import { getChildrenToRender, isImg } from './utils';
 
 class Pricing2 extends React.PureComponent {
-  getColumns = (columns) => columns.map((item) => {
+  getColumns = columns =>
+    columns.map(item => {
       const { childWrapper, ...$item } = item;
       return {
         align: 'center',
         ...$item,
-        title: (
-          <div {...childWrapper}>
-            {childWrapper.children.map(getChildrenToRender)}
-          </div>
-        ),
+        title: <div {...childWrapper}>{childWrapper.children.map(getChildrenToRender)}</div>,
       };
     });
 
-  getDataSource = (dataSource, columns) => dataSource.map((item, i) => {
+  getDataSource = (dataSource, columns) =>
+    dataSource.map((item, i) => {
       const obj = { key: i.toString() };
       item.children.forEach(($item, ii) => {
         if (columns[ii]) {
           obj[columns[ii].key] = (
             <div {...$item}>
-              {typeof $item.children === 'string'
-              && $item.children.match(isImg) ? (
+              {typeof $item.children === 'string' && $item.children.match(isImg) ? (
                 <img src={$item.children} alt="img" />
-                ) : (
-                  $item.children
-                )}
+              ) : (
+                $item.children
+              )}
             </div>
           );
         }
@@ -46,17 +43,17 @@ class Pricing2 extends React.PureComponent {
       (item) => item.key.indexOf('name') === -1,
     );
     return newColumns.map((item, i) => {
-      const items = [].concat(names[0], item).filter((c) => c);
+      const items = [].concat(names[0], item).filter(c => c);
       if (items.length > 1) {
         items[0].colSpan = 0;
         items[1].colSpan = 2;
       }
-      const dataSources = dataSource.children.map(($item) => {
-        const child = $item.children.filter((c) => c.name.indexOf('name') === -1);
-        const n = $item.children.filter((c) => c.name.indexOf('name') >= 0);
+      const dataSources = dataSource.children.map($item => {
+        const child = $item.children.filter(c => c.name.indexOf('name') === -1);
+        const n = $item.children.filter(c => c.name.indexOf('name') >= 0);
         return {
           ...$item,
-          children: [].concat(n[0], child[i]).filter((c) => c),
+          children: [].concat(n[0], child[i]).filter(c => c),
         };
       });
       const props = {
@@ -64,9 +61,7 @@ class Pricing2 extends React.PureComponent {
         columns: this.getColumns(items),
         dataSource: this.getDataSource(dataSources, items),
       };
-      return (
-        <Table key={i.toString()} {...props} pagination={false} bordered />
-      );
+      return <Table key={i.toString()} {...props} pagination={false} bordered />;
     });
   };
 

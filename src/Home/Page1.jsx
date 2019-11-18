@@ -17,8 +17,7 @@ const featuresCN = [
   },
   {
     title: 'Customizable triggers',
-    content:
-      'Refine typical pages and scenes from mid- and back-end applications',
+    content: 'Refine typical pages and scenes from mid- and back-end applications',
     src: 'https://gw.alipayobjects.com/zos/rmsportal/smwQOoxCjXVbNAKMqvWk.svg',
     color: '#2F54EB',
     shadowColor: 'rgba(47,84,235,.12)',
@@ -53,16 +52,14 @@ const featuresCN = [
   },
   {
     title: 'Personlize branding',
-    content:
-      'Built-in industry-wide international solution (please stay tuned)',
+    content: 'Built-in industry-wide international solution (please stay tuned)',
     src: 'https://gw.alipayobjects.com/zos/rmsportal/JsixxWSViARJnQbAAPkI.svg',
     color: '#722ED1',
     shadowColor: 'rgba(114,46,209,.12)',
   },
   {
     title: 'Integrate easily',
-    content:
-      'Good engineering practices help you consistently produce high quality code',
+    content: 'Good engineering practices help you consistently produce high quality code',
     src: 'https://gw.alipayobjects.com/zos/rmsportal/pbmKMSFpLurLALLNliUQ.svg',
     color: '#FA8C16',
     shadowColor: 'rgba(250,140,22,.12)',
@@ -97,7 +94,7 @@ class Page1 extends React.PureComponent {
     };
   }
 
-  onMouseOver = (i) => {
+  onMouseOver = i => {
     this.setState({
       hoverNum: i,
     });
@@ -109,7 +106,7 @@ class Page1 extends React.PureComponent {
     });
   };
 
-  getEnter = (e) => {
+  getEnter = e => {
     const i = e.index;
     const r = Math.random() * 2 - 1;
     const y = Math.random() * 10 + 5;
@@ -143,7 +140,7 @@ class Page1 extends React.PureComponent {
         'point-1',
         'point-2',
         'point-3',
-      ].map((className) => (
+      ].map(className => (
         <TweenOne
           component="i"
           className={className}
@@ -180,22 +177,13 @@ class Page1 extends React.PureComponent {
             <div
               className="page1-image"
               style={{
-                boxShadow: `${isHover ? '0 12px 24px' : '0 6px 12px'} ${
-                  item.shadowColor
-                }`,
+                boxShadow: `${isHover ? '0 12px 24px' : '0 6px 12px'} ${item.shadowColor}`,
               }}
             >
-              <img
-                src={item.src}
-                alt="img"
-                style={i === 4 ? { marginLeft: -15 } : {}}
-              />
+              <img src={item.src} alt="img" style={i === 4 ? { marginLeft: -15 } : {}} />
             </div>
             <h3>{item.title}</h3>
-            <p>
-{item.content}
-{' '}
- </p>
+            <p>{item.content} </p>
           </div>
         </li>
       );
@@ -231,12 +219,7 @@ class Page1 extends React.PureComponent {
             </Parallax>
           )}
           <h2>
-            What can 
-{' '}
-<span>Proofcred</span>
-{' '}
-do for you
-{" "}
+            What can <span>Proofcred</span> do for you{' '}
           </h2>
           <div className="title-line-wrapper page1-line">
             <div className="title-line" />

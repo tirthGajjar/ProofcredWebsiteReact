@@ -1,55 +1,55 @@
 /* eslint-disable */
-import React from "react";
-import TweenOne from "rc-tween-one";
-import SvgDrawPlugin from "rc-tween-one/lib/plugin/SvgDrawPlugin";
+import React from 'react';
+import TweenOne from 'rc-tween-one';
+import SvgDrawPlugin from 'rc-tween-one/lib/plugin/SvgDrawPlugin';
 TweenOne.plugins.push(SvgDrawPlugin);
 
 const animate = {
   scale: {
     scale: 0,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   alpha: {
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   y: {
     y: 30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   y2: {
     y: -30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   x: {
     x: 30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   x2: {
     x: -30,
     opacity: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   draw: {
     SVGDraw: 0,
-    type: "from",
-    ease: "easeOutQuad"
+    type: 'from',
+    ease: 'easeOutQuad',
   },
   loop: {
     yoyo: true,
     repeat: -1,
-    duration: 2500
-  }
+    duration: 2500,
+  },
 };
 
 export default function() {

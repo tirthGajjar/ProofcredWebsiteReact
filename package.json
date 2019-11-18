@@ -4,7 +4,7 @@
     "index": "./index.js"
   },
   "dependencies": {
-    "antd": "^3.25.1",
+    "antd": "^3.25.2",
     "classnames": "^2.2.6",
     "enquire-js": "^0.2.1",
     "prop-types": "^15.7.2",
@@ -27,6 +27,7 @@
     "dora-plugin-webpack": "^1.0.0",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.16.0",
@@ -34,9 +35,23 @@
     "gh-pages": "^2.1.1",
     "husky": "^3.0.9",
     "pre-commit": "^1.2.2",
-    "prettier": "1.19.1",
+    "prettier": "^1.19.1",
+    "prettier-eslint": "^9.0.0",
     "pretty-quick": "^2.0.1",
-    "redbox-react": "^1.6.0"
+    "redbox-react": "^1.6.0",
+    "rimraf": "^3.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint",
+      "pretty-quick — staged",
+      "git add"
+    ]
   },
   "scripts": {
     "build": "atool-build && copy index.html dist",
@@ -44,7 +59,7 @@
     "eslint-fix": "eslint --fix src/ --ext .js,.jsx",
     "start": "dora --plugins webpack",
     "test": "atool-test-mocha ./**/__tests__/*-test.js",
-    "deploy": "rm -rf dist && npm run build && node ./deploy.js",
+    "deploy": "rimraf dist && npm run build && node ./deploy.js",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\"",
     "precommit": "pretty-quick --staged",
     "postcommit": "git update-index -g"

@@ -1,7 +1,5 @@
 import React from 'react';
-import {
- Row, Col, Button, Icon 
-} from 'antd';
+import { Row, Col, Button, Icon } from 'antd';
 
 const IconFont = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_1513957_il1621bzc9t.js',
@@ -16,10 +14,7 @@ function Footer() {
             <div className="footer-center">
               <h2>About us</h2>
               <div>
-                <a
-                  target="_blank "
-                  href="https://github.com/ant-design/ant-design-pro"
-                >
+                <a target="_blank " href="https://github.com/ant-design/ant-design-pro">
                   Proofcred
                 </a>
               </div>
@@ -35,11 +30,7 @@ function Footer() {
                 <a href="http://scaffold.ant.design">Scaffolds</a>
               </div>
               <div>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="http://motion.ant.design"
-                >
+                <a target="_blank" rel="noopener" href="http://motion.ant.design">
                   Ant Motion
                 </a>
               </div>
