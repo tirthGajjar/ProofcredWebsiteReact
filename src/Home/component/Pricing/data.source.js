@@ -1,8 +1,8 @@
 import React from 'react';
 
 export const Pricing20DataSource = {
-  wrapper: { className: 'home-page-wrapper pricing2-wrapper' },
-  page: { className: 'home-page pricing2' },
+  wrapper: { className: 'home-page-wrapper pricing2-wrapper pricing-detail-section' },
+  page: { className: 'home-page pricing2 p-0' },
   OverPack: { playScale: 0.3, className: 'pricing2-content-wrapper' },
   titleWrapper: {
     className: 'pricing2-title-wrapper',
@@ -19,10 +19,10 @@ export const Pricing20DataSource = {
     size: 'default',
     className: 'pricing2-table',
     columns: {
-      children: [
+      MONTHLY: [
         {
-          dataIndex: 'name',
-          key: 'name',
+          dataIndex: 'empty',
+          key: 'empty',
           name: 'empty',
           childWrapper: {
             children: [
@@ -43,6 +43,35 @@ export const Pricing20DataSource = {
                 className: 'pricing2-table-name',
                 children: (
                   <span>
+                    <p>Free</p>
+                  </span>
+                ),
+              },
+              {
+                name: 'content',
+                className: 'pricing2-table-money',
+                children: (
+                  <div className="pricing2-table-price">
+                    <span className="pricing2-table-amount">Free</span>
+                    <div>For 15 Days</div>
+                  </div>
+                ),
+              },
+            ],
+          },
+        },
+        {
+          dataIndex: 'individual',
+          key: 'individual',
+          name: 'Individual',
+          childWrapper: {
+            className: 'pricing2-table-name-block',
+            children: [
+              {
+                name: 'name',
+                className: 'pricing2-table-name',
+                children: (
+                  <span>
                     <p>Individual</p>
                   </span>
                 ),
@@ -53,7 +82,9 @@ export const Pricing20DataSource = {
                 children: (
                   <div className="pricing2-table-price">
                     <span className="pricing2-table-currency">$</span>
-                    <span className="pricing2-table-amount">9</span>
+                    <span className="pricing2-table-amount">
+                      9
+                    </span>
                     <div>Per Month</div>
                   </div>
                 ),
@@ -62,9 +93,9 @@ export const Pricing20DataSource = {
           },
         },
         {
-          dataIndex: 'basic',
-          key: 'basic',
-          name: 'basic',
+          dataIndex: 'Start_Up',
+          key: 'Start_Up',
+          name: 'Start Up',
           childWrapper: {
             className: 'pricing2-table-name-block',
             children: [
@@ -92,9 +123,9 @@ export const Pricing20DataSource = {
           },
         },
         {
-          dataIndex: 'pro',
-          key: 'pro',
-          name: 'pro',
+          dataIndex: 'Business',
+          key: 'Business',
+          name: 'Business',
           childWrapper: {
             className: 'pricing2-table-name-block',
             children: [
@@ -115,6 +146,140 @@ export const Pricing20DataSource = {
                     <span className="pricing2-table-currency">$</span>
                     <span className="pricing2-table-amount">59</span>
                     <div>Per Month</div>
+                  </div>
+                ),
+              },
+            ],
+          },
+        },
+      ],
+      YEARLY: [
+        {
+          dataIndex: 'empty',
+          key: 'empty',
+          name: 'empty',
+          childWrapper: {
+            children: [
+              { name: 'name', children: '' },
+              { name: 'content', children: ' ' },
+            ],
+          },
+        },
+        {
+          dataIndex: 'free',
+          key: 'free',
+          name: 'free',
+          childWrapper: {
+            className: 'pricing2-table-name-block',
+            children: [
+              {
+                name: 'name',
+                className: 'pricing2-table-name',
+                children: (
+                  <span>
+                    <p>Free</p>
+                  </span>
+                ),
+              },
+              {
+                name: 'content',
+                className: 'pricing2-table-money',
+                children: (
+                  <div className="pricing2-table-price">
+                    <span className="pricing2-table-amount">Free</span>
+                    <div>For 15 Days</div>
+                  </div>
+                ),
+              },
+            ],
+          },
+        },
+        {
+          dataIndex: 'individual',
+          key: 'individual',
+          name: 'Individual',
+          childWrapper: {
+            className: 'pricing2-table-name-block',
+            children: [
+              {
+                name: 'name',
+                className: 'pricing2-table-name',
+                children: (
+                  <span>
+                    <p>Individual</p>
+                  </span>
+                ),
+              },
+              {
+                name: 'content',
+                className: 'pricing2-table-money',
+                children: (
+                  <div className="pricing2-table-price">
+                    <span className="pricing2-table-currency">$</span>
+                    <span className="pricing2-table-amount">
+                      81
+                    </span>
+                    <div>Per Year</div>
+                  </div>
+                ),
+              },
+            ],
+          },
+        },
+        {
+          dataIndex: 'Start_Up',
+          key: 'Start_Up',
+          name: 'Start Up',
+          childWrapper: {
+            className: 'pricing2-table-name-block',
+            children: [
+              {
+                name: 'name',
+                className: 'pricing2-table-name',
+                children: (
+                  <span>
+                    <p>Start Up</p>
+                  </span>
+                ),
+              },
+              {
+                name: 'content',
+                className: 'pricing2-table-money',
+                children: (
+                  <div className="pricing2-table-price">
+                    <span className="pricing2-table-currency">$</span>
+                    <span className="pricing2-table-amount">261</span>
+                    <div>Per Year</div>
+                  </div>
+                ),
+              },
+            ],
+          },
+        },
+        {
+          dataIndex: 'Business',
+          key: 'Business',
+          name: 'Business',
+          childWrapper: {
+            className: 'pricing2-table-name-block',
+            children: [
+              {
+                name: 'name',
+                className: 'pricing2-table-name',
+                children: (
+                  <span>
+                    <p>Business</p>
+                  </span>
+                ),
+              },
+              {
+                name: 'content',
+                className: 'pricing2-table-money',
+                children: (
+                  <div className="pricing2-table-price">
+                    <span className="pricing2-table-currency">$</span>
+                    <span className="pricing2-table-amount">531</span>
+                    <div>Per Year</div>
                   </div>
                 ),
               },
@@ -155,6 +320,12 @@ export const Pricing20DataSource = {
               name: 'content2',
               className: 'pricing2-table-content',
             },
+            {
+              children:
+                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
+              name: 'content3',
+              className: 'pricing2-table-content',
+            },
           ],
         },
         {
@@ -170,13 +341,13 @@ export const Pricing20DataSource = {
               ),
             },
             {
-              children: '-',
+              children:
+                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
               name: 'content0',
               className: 'pricing2-table-content',
             },
             {
-              children:
-                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
+              children: '-',
               name: 'content1',
               className: 'pricing2-table-content',
             },
@@ -184,6 +355,12 @@ export const Pricing20DataSource = {
               children:
                 'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
               name: 'content2',
+              className: 'pricing2-table-content',
+            },
+            {
+              children:
+                'https://gw.alipayobjects.com/zos/basement_prod/14ce3060-34e6-4b30-9a45-1a6b95542310.svg',
+              name: 'content3',
               className: 'pricing2-table-content',
             },
           ],
@@ -204,7 +381,7 @@ export const Pricing20DataSource = {
               name: 'content0',
               children: (
                 <span>
-                  <p className="pricing2-table-campaign-limit">3</p>
+                  <p className="pricing2-table-campaign-limit">1000</p>
                 </span>
               ),
               className: 'pricing2-table-content',
@@ -213,13 +390,22 @@ export const Pricing20DataSource = {
               name: 'content1',
               children: (
                 <span>
-                  <p className="pricing2-table-campaign-limit">20</p>
+                  <p className="pricing2-table-campaign-limit">3</p>
                 </span>
               ),
               className: 'pricing2-table-content',
             },
             {
               name: 'content2',
+              children: (
+                <span>
+                  <p className="pricing2-table-campaign-limit">20</p>
+                </span>
+              ),
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content3',
               children: (
                 <span>
                   <p className="pricing2-table-campaign-limit">1000</p>
@@ -242,17 +428,22 @@ export const Pricing20DataSource = {
               ),
             },
             {
-              children: '10',
               name: 'content0',
+              children: 'Unlimited',
               className: 'pricing2-table-content',
             },
             {
+              children: '10',
               name: 'content1',
-              children: '60',
               className: 'pricing2-table-content',
             },
             {
               name: 'content2',
+              children: '60',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content3',
               children: 'Unlimited',
               className: 'pricing2-table-content',
             },
@@ -272,16 +463,21 @@ export const Pricing20DataSource = {
             },
             {
               name: 'content0',
-              children: '2000',
+              children: 'Unlimited',
               className: 'pricing2-table-content',
             },
             {
               name: 'content1',
-              children: '15000',
+              children: '2000',
               className: 'pricing2-table-content',
             },
             {
               name: 'content2',
+              children: '15000',
+              className: 'pricing2-table-content',
+            },
+            {
+              name: 'content3',
               children: 'Unlimited',
               className: 'pricing2-table-content',
             },

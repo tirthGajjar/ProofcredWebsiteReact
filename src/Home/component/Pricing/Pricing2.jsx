@@ -1,7 +1,7 @@
 import React from 'react';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
 import QueueAnim from 'rc-queue-anim';
-import { Table, Switch } from 'antd';
+import { Table, Switch, Tag } from 'antd';
 import { getChildrenToRender, isImg } from './utils';
 
 class Pricing2 extends React.PureComponent {
@@ -37,12 +37,12 @@ class Pricing2 extends React.PureComponent {
       return obj;
     });
 
-  getMobileChild = (table) => {
+  getMobileChild = (table, isMonthlyPlan) => {
     const { columns, dataSource, ...tableProps } = table;
-    const names = columns.children.filter(
+    const names = columns[isMonthlyPlan ? 'MONTHLY' : 'YEARLY'].filter(
       (item) => item.key.indexOf('name') >= 0,
     );
-    const newColumns = columns.children.filter(
+    const newColumns = columns[isMonthlyPlan ? 'MONTHLY' : 'YEARLY'].filter(
       (item) => item.key.indexOf('name') === -1,
     );
     return newColumns.map((item, i) => {
@@ -71,50 +71,54 @@ class Pricing2 extends React.PureComponent {
   };
 
   onPlanChange(e) {
-    console.log(' Plan Change :: ', e);
+    this.props.onPlanChange();
   }
 
   render() {
-    const { dataSource, isMobile, ...props } = this.props;
+    const { dataSource, isMobile, isMonthlyPlan, ...props } = this.props;
     const {
  Table: table, wrapper, page, titleWrapper 
 } = dataSource;
     const { columns, dataSource: tableData, ...$table } = table;
     const tableProps = {
       ...$table,
-      columns: this.getColumns(columns.children),
-      dataSource: this.getDataSource(tableData.children, columns.children),
+      columns: isMonthlyPlan ? this.getColumns(columns.MONTHLY) : this.getColumns(columns.YEARLY),
+      dataSource: this.getDataSource(tableData.children, columns.MONTHLY),
     };
     const childrenToRender = isMobile ? (
-      this.getMobileChild(table)
+      this.getMobileChild(table , isMonthlyPlan)
     ) : (
       <Table key="table" {...tableProps} pagination={false} bordered />
     );
     return (
       <div {...props} {...wrapper}>
         <div {...page}>
-          <div key="title" {...titleWrapper}>
-            {titleWrapper.children.map(getChildrenToRender)}
-          </div>
-          <div className="title-line-wrapper page1-line">
-            <div className="title-line" />
-          </div>
           <OverPack {...dataSource.OverPack}>
-            <div className="pricing2-pricing-plan-div">
-              <span className="pricing2-pricing-plan-name">Monthly</span>
-              <Switch
-                onChange={(e) => {
-                  this.onPlanChange(e);
-                }}
-              />
-              <span className="pricing2-pricing-plan-name">Annual</span>
-            </div>
             <QueueAnim
               type="bottom"
               leaveReverse
               ease={['easeOutQuad', 'easeInOutQuad']}
               key="content"
             >
+            <div className="pricing2-pricing-plan-div">
+              <span className="pricing2-pricing-plan-name">Monthly</span>
+              <Switch
+                style={{width: '50px'}}
+                checked={!isMonthlyPlan}
+                onChange={(e) => {
+                  this.onPlanChange(e);
+                }}
+              />
+              <span className="pricing2-pricing-plan-name">Annual</span>
+              <QueueAnim className="demo-content"
+                key="demo"
+                type={['right', 'left']}
+                ease={['easeOutQuart', 'easeInOutQuart']}>
+                { !isMonthlyPlan ? [
+                  <span className="pricing-plan-save-span"><Tag color="green" style={{padding: '5px 10px'}}>Save 20% Annually!</Tag></span>
+                ] : null}
+              </QueueAnim>
+            </div>
               {childrenToRender}
             </QueueAnim>
           </OverPack>

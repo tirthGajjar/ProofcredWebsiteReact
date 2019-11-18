@@ -13,20 +13,19 @@ import Pricing from "./component/Pricing";
 
 let isMobile;
 
-enquireScreen(b => {
+enquireScreen((b) => {
   isMobile = b;
 });
-configureAnchors({ offset: -60, scrollDuration: 200 });
 
 class Home extends React.PureComponent {
   state = {
-    isMobile
+    isMobile,
   };
 
   componentDidMount() {
-    enquireScreen(b => {
+    enquireScreen((b) => {
       this.setState({
-        isMobile: !!b
+        isMobile: !!b,
       });
     });
   }
@@ -37,7 +36,7 @@ class Home extends React.PureComponent {
         <div>
           <Header isMobile={this.state.isMobile} />
           <ScrollableAnchor id="scroll-anchor-banner">
-            <div></div>
+            <div />
           </ScrollableAnchor>
           <div className="home-wrapper">
             <Banner isMobile={this.state.isMobile} />

@@ -2,13 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Menu, Row, Col, Icon, Popover } from "antd";
-import Scrollspy from "react-scrollspy";
-
-// import ScrollableAnchor from 'react-scrollable-anchor';
 
 import Logo from "./component/logo";
-
-const searchEngine = "Google";
 
 export default class Header extends React.Component {
   static propTypes = {
