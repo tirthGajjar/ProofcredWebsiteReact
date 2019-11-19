@@ -50,7 +50,7 @@ class Home extends React.PureComponent {
             <Banner isMobile={isMobile} />
             <ScrollableAnchor id="features">
               {/* <Page1 /> */}
-              <Notifications />
+              <Notifications isMobile={isMobile} />
             </ScrollableAnchor>
             <ScrollableAnchor id="pricing">
               <Pricing />
