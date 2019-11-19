@@ -125,4 +125,5 @@ class Pricing2 extends React.PureComponent {
   }
 }
 
+
 export default Pricing2;

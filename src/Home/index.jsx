@@ -6,6 +6,7 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import { enquireScreen } from 'enquire-js';
 
 import Banner from './Banner';
+import Notifications from './Notifications';
 // import Page2 from './Page2';
 import Footer from './Footer';
 import Header from './Header';
@@ -39,7 +40,7 @@ class Home extends React.PureComponent {
   render() {
     const { isMobile } = this.state;
     return (
-      <DocumentTitle title="Proofcread">
+      <DocumentTitle title="ProofCred">
         <div>
           <Header isMobile={isMobile} />
           <div className="home-wrapper">
@@ -48,7 +49,8 @@ class Home extends React.PureComponent {
             </ScrollableAnchor>
             <Banner isMobile={isMobile} />
             <ScrollableAnchor id="features">
-              <Page1 />
+              {/* <Page1 /> */}
+              <Notifications />
             </ScrollableAnchor>
             <ScrollableAnchor id="pricing">
               <Pricing />

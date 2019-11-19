@@ -2,7 +2,7 @@ import React from 'react';
 import { Row, Col, Button, Icon } from 'antd';
 
 const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1513957_il1621bzc9t.js',
+  scriptUrl: '//at.alicdn.com/t/font_1518617_t6ler3oyl6a.js',
 });
 
 function Footer() {
@@ -10,28 +10,43 @@ function Footer() {
     <footer id="footer" className="dark">
       <div className="footer-wrap">
         <Row>
-          <Col lg={3} sm={24} xs={24}>
+          <Col lg={10} md={10} sm={24} xs={24}>
             <div className="footer-center">
               <h2>About us</h2>
               <div>
-                <a target="_blank " href="https://github.com/ant-design/ant-design-pro">
-                  Proofcred
-                </a>
+                We want to empower our customers to increase conversation rate of the visitors on their platform by enabling them to perform targeted engagement with the visitors with minimum development requirement.   
               </div>
-              <IconFont type="icon-linkedin1" />
-              <IconFont type="icon-facebook1" />
-              <IconFont type="icon-instagram" />
+              <a href="https://www.linkedin.com/company/ProofCred/" target="_blank" rel="noopener noreferrer">
+                <IconFont type="icon-linked" />
+                {' '}                
+              </a>
+              <a href="https://www.facebook.com/ProofCred/" target="_blank" rel="noopener noreferrer">
+                <IconFont type="icon-facebook" />
+                {' '}                
+              </a>
+              <a href="https://twitter.com/ProofCred/" target="_blank" rel="noopener noreferrer">
+                <IconFont type="icon-twitter" />
+                {' '}                
+              </a>
             </div>
           </Col>
           <Col lg={6} sm={24} xs={24}>
             <div className="footer-center">
               <h2>Product</h2>
               <div>
-                <a href="http://scaffold.ant.design">Scaffolds</a>
+                <a href="/#pricing">Pricing</a>
               </div>
               <div>
-                <a target="_blank" rel="noopener" href="http://motion.ant.design">
-                  Ant Motion
+                <a href="/#features">Features</a>
+              </div>
+              <div>
+                <a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design">
+                  Blog
+                </a>
+              </div>
+              <div>
+                <a target="_blank" rel="noopener noreferrer" href="http://motion.ant.design">
+                  FAQ
                 </a>
               </div>
             </div>
@@ -40,12 +55,13 @@ function Footer() {
             <div className="footer-center">
               <h2>Contact us</h2>
               <div>
-                <a href="#">support@proofcred.com</a>
+                <a href="#">support@Proofcred.com</a>
               </div>
             </div>
           </Col>
-          <span style={{ textAlign: 'center' }}>Copyright © Proofcred</span>
+          
         </Row>
+        <Row><div style={{ textAlign: 'center', paddingTop: '60px' }}>Copyright © ProofCred</div></Row>
       </div>
     </footer>
   );

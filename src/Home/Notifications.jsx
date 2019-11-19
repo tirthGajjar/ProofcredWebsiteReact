@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
-import Parallax from 'rc-scroll-anim/lib/ScrollParallax';
-import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
+import { Row, Col } from 'antd';
+import EmailCollector from './component/emailcollector'
 
 const { TweenOneGroup } = TweenOne;
 
@@ -82,11 +81,8 @@ const pointPos = [
   { x: 50, y: 50, opacity: 0.2 },
 ];
 
-class Page1 extends React.PureComponent {
-  static propTypes = {
-    isMobile: PropTypes.bool.isRequired,
-  };
-
+class Notifications extends React.PureComponent {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -130,105 +126,83 @@ class Page1 extends React.PureComponent {
 
   render() {
     const { hoverNum } = this.state;
-    let children = [[], [], []];
-    featuresCN.forEach((item, i) => {
-      const isHover = hoverNum === i;
-      const pointChild = [
-        'point-0 left',
-        'point-0 right',
-        'point-ring',
-        'point-1',
-        'point-2',
-        'point-3',
-      ].map(className => (
-        <TweenOne
-          component="i"
-          className={className}
-          key={className}
-          style={{
-            background: item.color,
-            borderColor: item.color,
-          }}
-        />
-      ));
-      const child = (
-        <li key={i.toString()}>
-          <div
-            className="page1-box"
-            onMouseEnter={() => {
-              this.onMouseOver(i);
-            }}
-            onMouseLeave={this.onMouseOut}
-          >
-            <TweenOneGroup
-              className="page1-point-wrapper"
-              enter={this.getEnter}
-              leave={{
-                x: 0,
-                y: 30,
-                opacity: 0,
-                duration: 300,
-                ease: 'easeInBack',
-              }}
-              // resetStyleBool={false}
-            >
-              {(this.props.isMobile || isHover) && pointChild}
-            </TweenOneGroup>
-            <div
-              className="page1-image"
-              style={{
-                boxShadow: `${isHover ? '0 12px 24px' : '0 6px 12px'} ${item.shadowColor}`,
-              }}
-            >
-              <img src={item.src} alt="img" style={i === 4 ? { marginLeft: -15 } : {}} />
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.content} </p>
-          </div>
-        </li>
-      );
-      children[Math.floor(i / 3)].push(child);
-    });
+    const { isMobile } = this.props;
 
-    children = children.map((item, i) => (
-      <QueueAnim
-        className="page1-box-wrapper"
-        key={i.toString()}
-        type="bottom"
-        leaveReverse
-        delay={[i * 100, (children.length - 1 - i) * 100]}
-        component="ul"
-      >
-        {item}
-      </QueueAnim>
-    ));
+
     return (
-      <div className="home-page page1">
+      <div className="home-page">
         <div className="home-page-wrapper" id="page1-wrapper">
-          {!this.props.isMobile && (
-            <Parallax
-              className="page1-bg"
-              animation={{
-                translateY: 200,
-                ease: 'linear',
-                playScale: [0, 1.65],
-              }}
-              location="page1-wrapper"
-            >
-              Feature
-            </Parallax>
-          )}
           <h2>
-            What can <span>ProofCred</span> do for you{' '}
+            What can 
+            {' '}
+            <span>ProofCred</span>
+            {' '}
+do for you
+            {' '}
           </h2>
           <div className="title-line-wrapper page1-line">
             <div className="title-line" />
           </div>
-          <OverPack>{children}</OverPack>
+          <div className="page1-box-wrapper">
+            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
+              <h1>
+                Email collector
+              </h1>
+              <div>
+                Collect email addresses for of website visitors for your mailing list or as contact us method
+              </div>
+            </Col>
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <EmailCollector />
+            </Col>
+          </div>
+          <div className="page1-box-wrapper">
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <EmailCollector />
+            </Col>
+            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
+              <h1>
+                Email collector
+              </h1>
+              <div>
+                Collect email addresses for of website visitors for your mailing list or as contact us method
+              </div>
+            </Col>
+          </div>
+          <div className="page1-box-wrapper">
+            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
+              <h1>
+                Email collector
+              </h1>
+              <div>
+                Collect email addresses for of website visitors for your mailing list or as contact us method
+              </div>
+            </Col>
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <EmailCollector />
+            </Col>
+          </div>
+          <div className="page1-box-wrapper">
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <EmailCollector />
+            </Col>
+            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
+              <h1>
+                Email collector
+              </h1>
+              <div>
+                Collect email addresses for of website visitors for your mailing list or as contact us method
+              </div>
+            </Col>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default Page1;
+Notifications.propTypes = {
+  isMobile: PropTypes.bool,
+};
+
+export default Notifications;

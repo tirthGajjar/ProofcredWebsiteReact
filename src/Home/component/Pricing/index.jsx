@@ -61,21 +61,21 @@ export default class Pricing extends React.Component {
         <QueueAnim type="bottom" leaveReverse ease={['easeOutQuad', 'easeInOutQuad']} key="content">
           <div className="pricing-header-message">
             <h1 className="c-white f-2-5">Plan and Pricing</h1>
-            <span className="pricing-header-span">Use free for 15 days.</span>
-            <span className="pricing-header-span">
-              Get started immediately, pay when you are ready.
-            </span>
-            <div className="m-2">
+            <h2 className="c-white  f-1-5">Increase your conversion, for less</h2>
+            <div className="pricing-header-btn-container">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://app.proofcred.com/register"
+                href="https://app.Proofcred.com/register"
               >
                 <Button className="pricing-custom-sign-up-butoon" size="large">
                   SIGN UP FOR FREE
                 </Button>
               </a>
             </div>
+            <span className="pricing-header-subtext">
+              14-day free trial. No credit card required.
+            </span>
           </div>
         </QueueAnim>
         <div

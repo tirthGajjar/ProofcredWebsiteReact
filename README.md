@@ -1,11 +1,11 @@
 
-### Proofcred
+### ProofCred
 
-Proofcred landing page.
+ProofCred landing page.
 
 ## preview
 
-https://know.tirth.dev/ProofcredWebsiteReact/
+https://know.tirth.dev/ProofCredWebsiteReact/
 
 ## install
 

@@ -60,14 +60,14 @@ class Header extends React.Component {
         <Menu.Item key="#pricing">
           <a href="#pricing">Pricing</a>
         </Menu.Item>
-        <Menu.Item key="#register">
-          <Button size="small">
-            <a href="https://app.proofcred.com/register">Sign Up</a>
+        <Menu.Item key="#login">
+          <Button>
+            <a href="https://app.Proofcred.com/login">Login</a>
           </Button>
         </Menu.Item>
-        <Menu.Item key="#login">
-          <Button size="small">
-            <a href="https://app.proofcred.com/login">Login</a>
+        <Menu.Item key="#register">
+          <Button type="primary">
+            <a href="https://app.Proofcred.com/register">Sign Up</a>
           </Button>
         </Menu.Item>
       </Menu>,

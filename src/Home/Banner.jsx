@@ -15,11 +15,11 @@ function Banner({ isMobile }) {
         </TweenOne>
       )}
       <QueueAnim className="banner-title-wrapper" type={isMobile ? 'bottom' : 'right'}>
-        <h1 key="h1">Proofcred</h1>
-        <p key="content">Increase Conversions & Site Growth - Proofcred</p>
+        <h1 key="h1">Attract & convert your website visitors</h1>
+        <p key="content">Increases trust, credibility, and sales with social proof</p>
         <div key="button" className="button-wrapper">
-          <a href="https://app.proofcred.com/register" target="_blank" rel="noopener noreferrer">
-            <Button type="primary">Sign Up Now</Button>
+          <a href="https://app.Proofcred.com/register" target="_blank" rel="noopener noreferrer">
+            <Button type="primary">Start your free trial</Button>
           </a>
         </div>
       </QueueAnim>
