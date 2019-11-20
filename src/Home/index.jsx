@@ -10,8 +10,9 @@ import Notifications from './Notifications';
 // import Page2 from './Page2';
 import Footer from './Footer';
 import Header from './Header';
-import Page1 from './Page1';
 import Pricing from './component/Pricing';
+import TermsAndCondition from './component/TermsAndCondition';
+import PrivacyPolicy from './component/PrivacyPolicy';
 
 let isMobile;
 
@@ -39,23 +40,42 @@ class Home extends React.PureComponent {
 
   render() {
     const { isMobile } = this.state;
+    const hashRoute = window.location.hash;
     return (
       <DocumentTitle title="ProofCred">
         <div>
           <Header isMobile={isMobile} />
-          <div className="home-wrapper">
-            <ScrollableAnchor id="home">
-              <div className="home-placeholder" style={{ height: '100vh', position: 'absolute' }} />
-            </ScrollableAnchor>
-            <Banner isMobile={isMobile} />
-            <ScrollableAnchor id="features">
-              {/* <Page1 /> */}
-              <Notifications isMobile={isMobile} />
-            </ScrollableAnchor>
-            <ScrollableAnchor id="pricing">
-              <Pricing />
-            </ScrollableAnchor>
-          </div>
+          {hashRoute === '#terms' ? (
+            <TermsAndCondition />
+          ) : (
+            <div />
+          )}
+          {hashRoute === '#privacy-policy' ? (
+            <PrivacyPolicy />
+          ) : (
+            <div />
+            )}
+          {hashRoute !== '#privacy-policy' && hashRoute !== '#terms' ? (
+            <div className="home-wrapper">
+              <ScrollableAnchor id="home">
+                <div>
+                  <div
+                    className="home-placeholder"
+                    style={{ height: '100vh', position: 'absolute' }}
+                  />
+                  <Banner isMobile={isMobile} />
+                </div>
+              </ScrollableAnchor>
+              <ScrollableAnchor id="features">
+                <Notifications isMobile={isMobile} />
+              </ScrollableAnchor>
+              <ScrollableAnchor id="pricing">
+                <Pricing />
+              </ScrollableAnchor>
+            </div>
+          ) : (
+            <div />
+          )}
           <Footer />
         </div>
       </DocumentTitle>

@@ -14,19 +14,26 @@ function Footer() {
             <div className="footer-center">
               <h2>About us</h2>
               <div>
-                We want to empower our customers to increase conversation rate of the visitors on their platform by enabling them to perform targeted engagement with the visitors with minimum development requirement.   
+                We want to empower our customers to increase conversation rate of the visitors on
+                their platform by enabling them to perform targeted engagement with the visitors
+                with minimum development requirement.
               </div>
-              <a href="https://www.linkedin.com/company/ProofCred/" target="_blank" rel="noopener noreferrer">
-                <IconFont type="icon-linked" />
-                {' '}                
+              <a
+                href="https://www.linkedin.com/company/ProofCred/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconFont type="icon-linked" />{' '}
               </a>
-              <a href="https://www.facebook.com/ProofCred/" target="_blank" rel="noopener noreferrer">
-                <IconFont type="icon-facebook" />
-                {' '}                
+              <a
+                href="https://www.facebook.com/ProofCred/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <IconFont type="icon-facebook" />{' '}
               </a>
               <a href="https://twitter.com/ProofCred/" target="_blank" rel="noopener noreferrer">
-                <IconFont type="icon-twitter" />
-                {' '}                
+                <IconFont type="icon-twitter" />{' '}
               </a>
             </div>
           </Col>
@@ -59,9 +66,18 @@ function Footer() {
               </div>
             </div>
           </Col>
-          
         </Row>
-        <Row><div style={{ textAlign: 'center', paddingTop: '60px' }}>Copyright © ProofCred</div></Row>
+        <Row style={{ textAlign: 'center', paddingTop: '60px' }}>
+          <span style={{ color: 'white' }}>Copyright © ProofCred</span>
+          <span style={{ margin: '0px 1rem' }}>|</span>
+          <span>
+            <a href="/#terms">Terms and Condition</a>
+          </span>
+          <span style={{ margin: '0px 1rem' }}>|</span>
+          <span>
+            <a href="/#terms">Privacy Policy</a>
+          </span>
+        </Row>
       </div>
     </footer>
   );

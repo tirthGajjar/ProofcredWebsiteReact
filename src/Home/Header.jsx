@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Menu, Row, Col, Icon, Popover, Button } from 'antd';
+import { useHistory } from 'react-router-dom';
 import Logo from './component/logo';
 
 class Header extends React.Component {
@@ -9,6 +10,7 @@ class Header extends React.Component {
     super(props);
     this.state = {
       menuVisible: false,
+      selectedKeys: [window.location.hash || '#home'],
     };
   }
 
@@ -27,11 +29,18 @@ class Header extends React.Component {
     });
   };
 
-  updateSelectedSection = () => {
+  
+  updateSelectedSection = (event) => {
     const selectedKeys = [window.location.hash || '#home'];
     this.setState({
       selectedKeys,
     });
+    const oldURL = `#${  event.oldURL.split('/#')[1]}`;
+    const newURL = `#${event.newURL.split('/#')[1]}`;
+    if (oldURL === '#terms' || newURL === '#terms') {
+      window.location.reload();
+    }
+
   };
 
   render() {

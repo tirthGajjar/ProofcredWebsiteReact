@@ -111,9 +111,9 @@ class Pricing2 extends React.PureComponent {
                 >
                   <span className="pricing-plan-save-span">
                     <Tag color="green" style={{ padding: '5px 10px' }}>
-                      {isMonthlyPlan ? 'Save 20% Annually!' : 'Hurray, you are saving 20%!'}   
+                      {isMonthlyPlan ? 'Save 20% Annually!' : 'Hurray, you are saving 20%!'}
                     </Tag>
-                  </span>                   
+                  </span>
                 </QueueAnim>
               </div>
               {childrenToRender}
@@ -124,6 +124,5 @@ class Pricing2 extends React.PureComponent {
     );
   }
 }
-
 
 export default Pricing2;

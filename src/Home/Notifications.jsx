@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TweenOne from 'rc-tween-one';
 import { Row, Col } from 'antd';
-import EmailCollector from './component/emailcollector'
-import ActiveUsers from './component/ActiveUsers'
-import Discounts from './component/Discounts'
+import EmailCollector from './component/emailcollector';
+import ActiveUsers from './component/ActiveUsers';
+import Discounts from './component/Discounts';
 
 const { TweenOneGroup } = TweenOne;
 
@@ -84,7 +84,6 @@ const pointPos = [
 ];
 
 class Notifications extends React.PureComponent {
-  
   constructor(props) {
     super(props);
     this.state = {
@@ -130,17 +129,11 @@ class Notifications extends React.PureComponent {
     const { hoverNum } = this.state;
     const { isMobile } = this.props;
 
-
     return (
       <div className="home-page">
         <div className="home-page-wrapper" id="page1-wrapper">
           <h2>
-            What can 
-            {' '}
-            <span>ProofCred</span>
-            {' '}
-do for you
-            {' '}
+            What can <span>ProofCred</span> do for you{' '}
           </h2>
           <div className="title-line-wrapper page1-line">
             <div className="title-line" />
@@ -151,12 +144,11 @@ do for you
                 <EmailCollector />
               </Col>
             )}
-            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
-              <h1>
-                Email collector
-              </h1>
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <h1>Email collector</h1>
               <div>
-                Collect email addresses for of website visitors for your mailing list or as contact us method
+                Collect email addresses for of website visitors for your mailing list or as contact
+                us method
               </div>
             </Col>
             {!isMobile && (
@@ -165,18 +157,17 @@ do for you
               </Col>
             )}
           </div>
-          <div className={`page1-box-wrapper ${isMobile? 'mobile' : ''}`}>
+          <div className={`page1-box-wrapper ${isMobile ? 'mobile' : ''}`}>
             {!isMobile && (
               <Col lg={12} md={12} sml={24} style={{ padding: '0px 10px' }}>
                 <ActiveUsers />
               </Col>
             )}
-            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
-              <h1>
-                Email collector
-              </h1>
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <h1>Email collector</h1>
               <div>
-                Collect email addresses for of website visitors for your mailing list or as contact us method
+                Collect email addresses for of website visitors for your mailing list or as contact
+                us method
               </div>
             </Col>
             {isMobile && (
@@ -191,12 +182,11 @@ do for you
                 <Discounts />
               </Col>
             )}
-            <Col lg={8} md={8} sml={24} style={{padding:'0 10px'}}>
-              <h1>
-                Email collector
-              </h1>
+            <Col lg={8} md={8} sml={24} style={{ padding: '0 10px' }}>
+              <h1>Email collector</h1>
               <div>
-                Collect email addresses for of website visitors for your mailing list or as contact us method
+                Collect email addresses for of website visitors for your mailing list or as contact
+                us method
               </div>
             </Col>
             {!isMobile && (
@@ -205,18 +195,17 @@ do for you
               </Col>
             )}
           </div>
-          <div className={`page1-box-wrapper ${isMobile? 'mobile' : ''}`}>
+          <div className={`page1-box-wrapper ${isMobile ? 'mobile' : ''}`}>
             {!isMobile && (
               <Col lg={12} md={12} sml={24} style={{ padding: '0px 10px' }}>
                 <EmailCollector />
               </Col>
             )}
-            <Col lg={12} md={12} sml={24} style={{padding:'0 10px'}}>
-              <h1>
-                Email collector
-              </h1>
+            <Col lg={12} md={12} sml={24} style={{ padding: '0 10px' }}>
+              <h1>Email collector</h1>
               <div>
-                Collect email addresses for of website visitors for your mailing list or as contact us method
+                Collect email addresses for of website visitors for your mailing list or as contact
+                us method
               </div>
             </Col>
             {!isMobile && (

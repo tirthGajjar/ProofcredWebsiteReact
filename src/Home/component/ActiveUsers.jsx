@@ -7,11 +7,7 @@ TweenOne.plugins.push(SvgDrawPlugin);
 export default function() {
   // safari 下取不到 transform 值，，所有动画在外层增加 g 标签。
   return (
-    <svg
-      viewBox="0 0 644 415"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 644 415" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d)">
         <path
           d="M607.735 242H16.265C12.8049 242 10 245.201 10 249.149V377.851C10 381.799 12.8049 385 16.265 385H607.735C611.195 385 614 381.799 614 377.851V249.149C614 245.201 611.195 242 607.735 242Z"
@@ -114,11 +110,7 @@ export default function() {
         d="M256.737 218.975C252.278 218.568 247.881 217.639 243.637 216.206C243.318 214.967 242.999 213.712 242.679 212.453C238.723 196.825 235 180.289 235 177.189C235 174.624 236.778 172.773 238.845 171.488C240.812 170.332 242.947 169.492 245.172 169C245.172 169 246.469 174.43 248.333 182.262C249.331 186.443 250.486 191.308 251.686 196.396V196.402C253.084 202.306 254.548 208.506 255.906 214.299C256.124 215.237 256.34 216.162 256.554 217.073V217.093C256.557 217.099 256.559 217.106 256.559 217.113C256.6 217.282 256.64 217.45 256.681 217.618C256.772 218.016 256.863 218.409 256.949 218.796C256.97 218.862 256.985 218.929 257 219C256.912 218.997 256.824 218.988 256.737 218.975Z"
         fill="#D0CDE1"
       />
-      <path
-        opacity="0.2"
-        d="M248 181L257 217C257 217 252.8 185.5 248 181Z"
-        fill="black"
-      />
+      <path opacity="0.2" d="M248 181L257 217C257 217 252.8 185.5 248 181Z" fill="black" />
       <path
         opacity="0.2"
         d="M283 176L280.51 188.498L279.655 192.79L275.139 215.468H275.134L274.995 216.194H274.99L274.66 217.872H274.655L274.619 217.882L274.536 217.898L274 218C274.046 217.427 274.103 216.813 274.165 216.163C274.186 215.923 274.206 215.677 274.232 215.422C275.201 204.97 277.268 186.917 280.51 179.356C281.273 177.576 282.103 176.379 283 176Z"
@@ -230,21 +222,9 @@ export default function() {
           />
           <feOffset dx={10} dy={10} />
           <feGaussianBlur stdDeviation={10} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
         <filter
           id="filter1_d"
@@ -263,21 +243,9 @@ export default function() {
           />
           <feOffset dx={4} dy={4} />
           <feGaussianBlur stdDeviation={2} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
         <filter
           id="filter2_d"
@@ -296,21 +264,9 @@ export default function() {
           />
           <feOffset dx={4} dy={4} />
           <feGaussianBlur stdDeviation={2} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
         <filter
           id="filter3_d"
@@ -329,21 +285,9 @@ export default function() {
           />
           <feOffset dx={4} dy={4} />
           <feGaussianBlur stdDeviation={2} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow"
-            result="shape"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
         </filter>
       </defs>
     </svg>
