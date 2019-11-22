@@ -23,17 +23,20 @@ function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IconFont type="icon-linked" />{' '}
+                <IconFont type="icon-linked" />
+{' '}
               </a>
               <a
                 href="https://www.facebook.com/ProofCred/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <IconFont type="icon-facebook" />{' '}
+                <IconFont type="icon-facebook" />
+{' '}
               </a>
               <a href="https://twitter.com/ProofCred/" target="_blank" rel="noopener noreferrer">
-                <IconFont type="icon-twitter" />{' '}
+                <IconFont type="icon-twitter" />
+{' '}
               </a>
             </div>
           </Col>
@@ -75,7 +78,7 @@ function Footer() {
           </span>
           <span style={{ margin: '0px 1rem' }}>|</span>
           <span>
-            <a href="/#terms">Privacy Policy</a>
+            <a href="/#privacy-policy">Privacy Policy</a>
           </span>
         </Row>
       </div>

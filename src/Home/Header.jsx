@@ -40,6 +40,9 @@ class Header extends React.Component {
     if (oldURL === '#terms' || newURL === '#terms') {
       window.location.reload();
     }
+    if (oldURL === '#privacy-policy' || newURL === '#privacy-policy') {
+      window.location.reload();
+    }
 
   };
 
@@ -99,7 +102,7 @@ class Header extends React.Component {
         ) : null}
         <Row>
           <Col lg={4} md={5} sm={24} xs={24}>
-            <a id="logo">
+            <a id="logo" href="/">
               <Logo />
             </a>
           </Col>
